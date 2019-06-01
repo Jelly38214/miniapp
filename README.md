@@ -1,6 +1,7 @@
 # 原生小程序辅助功能 
 
-- [x] 使用iconfont, 具体配置查看src下的iconfont目录文件
+- [x] 使用iconfont, 具体配置查看src下的iconfont目录文件 
+- [x] 使用less, 具体配置查看src下的iconfont目录gulp文件
 
 ### iconfont的使用
 
@@ -33,3 +34,8 @@
     display: none;
 }
 ```
+
+### less的使用
+
+1. 启动gulp, npm start;
+2. 声明一个和页面acss/wxss同名的less文件，然后在编写你的css，保存，gulp会自动监听变动然后编译成同名的acss/wxss 
