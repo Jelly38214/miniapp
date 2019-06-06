@@ -1,0 +1,23 @@
+{
+  "name": "alipay-mini-app",
+  "version": "1.0.0",
+  "description": "iconfont",
+  "main": "app.js",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-font2base64": "0.0.15",
+    "gulp-less": "^3.5.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-svg-css": "^1.3.0",
+    "gulp-svgmin": "^1.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp svg && gulp",
+  },
+  "author": "jelly38214",
+  "license": "ISC"
+}

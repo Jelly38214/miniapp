@@ -1,0 +1,17 @@
+/*该文件配置全局样式，会自动整合到app.acss，不需要改app.acss*/
+
+page {
+  /* 页面的设置 */
+}
+
+/* 初始化iconfont svg */
+.svg {
+display: inline-block;
+font-size: 16px;
+width: 1em;
+height: 1em;
+vertical-align: -0.15em;
+fill: currentColor;
+overflow: hidden;
+background-repeat: no-repeat;
+}
