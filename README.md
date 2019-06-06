@@ -39,3 +39,30 @@
 
 1. 启动gulp, npm start;
 2. 声明一个和页面acss/wxss同名的less文件，然后在编写你的css，保存，gulp会自动监听变动然后编译成同名的acss/wxss 
+
+### EventEmitter的使用
+
+当你想得知app.globalData的某个数据变化，除了用Object.defineProperty来监听(这种方式，无法取消监听), 可以使用EventEmitter， globalData变化时，手动分发出一个事件，然后再在某处监听这个事件，来执行对应的业务逻辑。
+
+用法：
+   ```javascript
+      import EventEmitter from 'src/eventemitter/eventemitter';
+      const emitter = new EventEmitter();
+      emitter.on('test', function(time) {console.log('now is: ', time)});
+      setTimeout(() => {
+        emitter.emit('test', Date.now());
+      }2000)
+   ```
+
+支付宝自带了EventEmitter模块，但文档没有暴露出来,但你依旧可以这样用
+
+```javascript
+  import { EventEmitter } from 'events';
+  const emitter = new EventEmitter();
+```
+
+参考：
+
+  1. [文章1](https://www.cnblogs.com/chrissong/p/10341219.html)
+  2. [文章2](http://menzhongxin.com/2017/05/03/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8FJS%E5%AE%9E%E7%8E%B0/)
+  3. [文章3](https://www.jb51.net/article/137419.htm)
