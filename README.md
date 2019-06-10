@@ -66,3 +66,17 @@
   1. [文章1](https://www.cnblogs.com/chrissong/p/10341219.html)
   2. [文章2](http://menzhongxin.com/2017/05/03/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8FJS%E5%AE%9E%E7%8E%B0/)
   3. [文章3](https://www.jb51.net/article/137419.htm)
+
+
+### 使用async/await
+
+原生支付宝小程序和百度小程序都能支持async/await， 但微信支付宝截止到今日都没有支持。无意中扒到微信小程序源码，然后借助regeratorruntime这个库，再一步步尝试使用async/await去触发报错机制，然后做一些特定修改，最终使得微信小程序得以支持async/await
+
+使用`async/await` 则需要在你使用async/await的js文件引入`src/async/regeneratorRuntime.js`
+
+```javascript
+  // 举个例子
+  // pages/index/index.js
+  // 导出的变量名必须为regeneratorRuntime
+  import regeneratorRuntime from '你项目路径下的regeneratorRuntime';
+```
