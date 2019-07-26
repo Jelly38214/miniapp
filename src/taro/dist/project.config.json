@@ -1,0 +1,13 @@
+{
+	"miniprogramRoot": "./",
+	"projectname": "bytedance",
+	"description": "字节头条小程序",
+	"appid": "tt949ce2210bb6168a",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false
+	},
+	"compileType": "miniprogram"
+}

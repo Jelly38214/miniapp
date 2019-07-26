@@ -1,0 +1,3 @@
+<block tt:if="{{$taroCompReady}}">
+    <web-view src="{{url}}"></web-view>
+</block>

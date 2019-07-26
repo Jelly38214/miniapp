@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "user-item": "./components/userItem"
+  },
+  "navigationBarTitleText": "Taro模版"
+}

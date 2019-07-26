@@ -1,0 +1,76 @@
+// 设置字体大小和颜色
+.set-font-color(@size: 24px, @color: #333, @weight: normal) {
+  font-size: @size;
+  color: @color;
+  font-weight: @weight;
+} // 单行溢出
+.one-line-precess() {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 两行文字溢出
+.two-line-process(@height,@line:2) {
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: @height;
+  line-height: @height / @line;
+}
+
+// 滚动容器
+.scroll-wrapper {
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+      display: none;
+      height: 0;
+      color: transparent;
+      background: transparent;
+  }
+}
+
+.retina-border (@bc: #E7E7E7) {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid @bc;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+
+.retina-border-top(@bc: #E7E7E7) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-top: 1px solid @bc;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+
+@main-color: #FF0023;
+@main-opacity-color: #FEFCE0;
+@border-color: #f5f5f5;

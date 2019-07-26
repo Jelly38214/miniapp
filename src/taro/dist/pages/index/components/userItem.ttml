@@ -1,0 +1,7 @@
+<block tt:if="{{$taroCompReady}}">
+    <view class="home-component-useritem-container">
+        <image class="user-pic" src="{{user.picture.medium}}"></image>
+        <view class="user-info-wrapper"><text class="user-name info-item">{{user.name.first + ' ' + user.name.last}}</text><text class="user-gender info-item">{{user.gender}}</text><text class="user-phone info-item">{{user.phone}}</text><text class="user-address info-item">{{user.location.state + ' ' + user.location.city + ' ' + user.location.street}}</text>
+        </view>
+    </view>
+</block>
