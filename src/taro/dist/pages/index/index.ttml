@@ -1,0 +1,10 @@
+<block tt:if="{{$taroCompReady}}">
+    <block tt:if="{{UserStore.userArray.length === 0}}">
+        <view>获取用户数据中....</view>
+    </block>
+    <block tt:else="{{true}}">
+        <view class="page-home-container">
+            <user-item tt:key="$original.phone" tt:for="{{loopArray1}}" tt:for-item="item" tt:for-index="_anonIdx2" compid="{{item.$compid__1}}"></user-item>
+        </view>
+    </block>
+</block>
